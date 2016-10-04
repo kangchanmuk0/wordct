@@ -49,8 +49,9 @@ public class WordCount {
   
   public void countWords(File sourceFile) throws IOException {
       Scanner wordScanner = new Scanner(sourceFile);
-      wordScanner.useDelimiter("[^가-하ㄱ-ㅎ]+");
-      
+      wordScanner.useDelimiter("[^가-하]+"); // 긍정단어 들어갈 자리
+      //여기에 포함되는 어미가 count 된다.
+      //여기에 모든 긍정 단어 넣기.
       while (wordScanner.hasNext()) {
           String word = wordScanner.next();
           _totalWords++;
@@ -71,8 +72,9 @@ public class WordCount {
  //Record frequency of a word in a String
   public void countWords(String source) {
       Scanner wordScanner = new Scanner(source);
-      wordScanner.useDelimiter("[^가-하ㄱ-ㅎ]+");
-      
+      wordScanner.useDelimiter("[^가-하]+"); //부정 단어 들어갈 자리
+      // 여기들어간 단어를 제외하고 count된다.
+      //여기다가 부정어를 싹다 집어 넣으면 결과값이 긍정어 갯수가 count 된다.
       while (wordScanner.hasNext()) {
           String word = wordScanner.next();
           _totalWords++;

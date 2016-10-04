@@ -26,12 +26,12 @@ class Main {
           for (int i=0; i<n; i++) {
           outputFileWriter.write(frequency[i] + " " + words[i]+"\r\n");
           }
-          outputFileWriter.write("\r\nTotal number of words: " + counter.getWordCount());
-          outputFileWriter.write("\r\nTotal number of unique words: " + n);
+          outputFileWriter.write("\r\n긍정단어 개수: " + counter.getWordCount());
+          outputFileWriter.write("\r\n총 사용 단어 수: " + n);
           outputFileWriter.close();     
          }
-          System.out.println("긍정 단어 수: " + counter.getWordCount());
-          System.out.println("부정 단어 수: " + n);
+          System.out.println("긍정 단어 수: " + counter.getWordCount()); //총 단어 수
+          System.out.println("총 사용 단어 수: " + n); // 텍스트파일에서 사용된 단어수
           } catch (IOException error) {
             System.out.println(error);
       }
