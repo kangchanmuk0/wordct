@@ -49,7 +49,7 @@ public class WordCount {
   
   public void countWords(File sourceFile) throws IOException {
       Scanner wordScanner = new Scanner(sourceFile);
-      wordScanner.useDelimiter("[^A-Za-z]+");
+      wordScanner.useDelimiter("[^가-하ㄱ-ㅎ]+");
       
       while (wordScanner.hasNext()) {
           String word = wordScanner.next();
@@ -71,7 +71,7 @@ public class WordCount {
  //Record frequency of a word in a String
   public void countWords(String source) {
       Scanner wordScanner = new Scanner(source);
-      wordScanner.useDelimiter("[^A-Za-z]+");
+      wordScanner.useDelimiter("[^가-하ㄱ-ㅎ]+");
       
       while (wordScanner.hasNext()) {
           String word = wordScanner.next();

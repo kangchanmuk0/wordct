@@ -8,7 +8,7 @@ class Main {
       
       try {
           //Get file to analyze   
-          String fileName = "BraveNewWorld.txt";
+          String fileName = "TextTest.txt";
           File inputFile = new File(fileName);
           System.out.println("File analyzed: " + fileName);
          
@@ -22,7 +22,7 @@ class Main {
           
           //Write the results to text file
           int n = counter.getEntryCount();{
-          FileWriter outputFileWriter = new FileWriter("result.txt");
+          FileWriter outputFileWriter = new FileWriter("result1.txt");
           for (int i=0; i<n; i++) {
           outputFileWriter.write(frequency[i] + " " + words[i]+"\r\n");
           }
