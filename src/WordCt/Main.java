@@ -8,7 +8,7 @@ class Main {
 
       try {
           //Get file to analyze   
-          String fileName = "TextTest.txt";
+          String fileName = "ch1.txt";
           File inputFile = new File(fileName);
           System.out.println("File analyzed: " + fileName);
          
