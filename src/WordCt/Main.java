@@ -4,8 +4,8 @@ import java.util.*;
 
 class Main {
   public static void main(String[] unused) {
-   
-      
+
+
       try {
           //Get file to analyze   
           String fileName = "TextTest.txt";
@@ -36,4 +36,5 @@ class Main {
             System.out.println(error);
       }
   }
+  
 }
