@@ -24,7 +24,7 @@ class CompareFrequency implements Comparator<Map.Entry<String, Int>> {
           result = 1;
           
       } else { 
-          //If counts are equal, compare keys alphabetically.
+        
           result = word1.getKey().compareTo(word2.getKey());
       }
       return result;
@@ -42,7 +42,7 @@ public class WordCount {
   Map<String, Int> _wordFrequency; 
   int              _totalWords;
  
- //Constructor
+
   public WordCount() {
       _wordFrequency = new HashMap<String, Int>();
       _totalWords    = 0;
@@ -70,16 +70,14 @@ public class WordCount {
       		+ "Å¸-Å¸ ÅÂ-ÅÂ ÅË-ÅË ¶O-¶O ÅÍ-ÅÍ Å×-Å× Åß-Åß Åâ-Åâ Åä-Åä Åí-Åí Åï-Åï Åğ-Åğ Åô-Åô Åõ-Åõ Åı-Åı Æ¡-Æ¡ Æ¢-Æ¢ Æ©-Æ© Æ®-Æ® Æ·-Æ· Æ¼-Æ¼,"
       		+ "ÆÄ-ÆÄ ÆĞ-ÆĞ ÆÙ-ÆÙ »—-»— ÆÛ-ÆÛ Æä-Æä Æì-Æì Æó-Æó Æ÷-Æ÷ Ç¡-Ç¡ ½-½ Ç£-Ç£ Ç¥-Ç¥ Çª-Çª Ç´-Ç´ ¿R-¿R Ç¶-Ç¶ Ç»-Ç» ÇÁ-ÇÁ Àc-Àc ÇÇ-ÇÇ,"
       		+ "ÇÏ-ÇÏ ÇØ-ÇØ Çá-Çá Á…-Á… Çã-Çã Çì-Çì Çô-Çô Çı-Çı È£-È£ È­-È­ È³-È³ È¸-È¸ È¿-È¿ ÈÄ-ÈÄ ÈÌ-ÈÌ ÈÑ-ÈÑ ÈÖ-ÈÖ ÈŞ-ÈŞ Èå-Èå Èñ-Èñ È÷-È÷,]+"); 
-      // ±àÁ¤´Ü¾î µé¾î°¥ ÀÚ¸®
-      //¿©±â¿¡ Æ÷ÇÔµÇ´Â ¾î¹Ì°¡ count µÈ´Ù.
-      //¿©±â¿¡ ¸ğµç ±àÁ¤ ´Ü¾î ³Ö±â.
+    
       while (wordScanner.hasNext()) {
           String word = wordScanner.next();
           _totalWords++;
       
-          //Add word if not already placed, else increment count
+       
               Int count = _wordFrequency.get(word);
-              if (count == null) {    // Create new entry
+              if (count == null) {    
                   _wordFrequency.put(word, new Int(1));
               } else {               
                   count.value++;
@@ -90,12 +88,10 @@ public class WordCount {
   }
   
   
- //Record frequency of a word in a String
+// ´Ü¾î »ç¿ë °¹¼ö
   public void countWords(String source) {
       Scanner wordScanner = new Scanner(source);
-      wordScanner.useDelimiter("[^¾Ê-¾Ê-¾Ê,¸ø-¸ø,½È-]+"); //ºÎÁ¤ ´Ü¾î µé¾î°¥ ÀÚ¸®
-      // ¿©±âµé¾î°£ ´Ü¾î¸¦ Á¦¿ÜÇÏ°í countµÈ´Ù.
-      //¿©±â´Ù°¡ ºÎÁ¤¾î¸¦ ½Ï´Ù Áı¾î ³ÖÀ¸¸é °á°ú°ªÀÌ ±àÁ¤¾î °¹¼ö°¡ count µÈ´Ù.
+      wordScanner.useDelimiter("[^]+");
       while (wordScanner.hasNext()) {
           String word = wordScanner.next();
           _totalWords++;
